@@ -1,25 +1,14 @@
-# Factorial 
+def fact(x):
+    fact = 1
+    for i in range(1, x+1):
+        fact *= i
+    return fact
 
-number = int(input("Enter a number:\n"))
+x = int(input("number: "))       
 
-def factorial(number):
-
-    if number < 0:
-        print("Negative number is not allowed.")
-
-    elif number == 0:
-        print(f"The factorial of {number} is {1}")
-
-    else:
-        factorial = 1
-        count = number
-
-        while True:
-            factorial *= count
-            count -= 1
-            if count <= 0:
-                break
-
-        print(f"The factorial of {number} is {factorial}")
-
-factorial(number)
+if (x == 0):
+    print("Factorial of {0} is 1".format(x))
+elif (x < 0):
+    print("Negative number is not allowed")
+else:
+    print("Factorial of {0} is {1}".format(x, fact(x)))
