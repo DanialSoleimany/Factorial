@@ -6,4 +6,9 @@ def fact_rec(x):
 
 x = int(input("number: "))
 
-print(fact_rec(x))
+if (x == 0):
+    print("Factorial of {0} is 1".format(x))
+elif (x < 0):
+    print("Negative number is not allowed")
+else:
+    print("Factorial of {0} is {1}".format(x, fact_rec(x)))
